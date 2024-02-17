@@ -30,7 +30,7 @@ body{
     height: auto;
     display: grid;
     place-items: center;
-     margin-top: 10%;
+    margin: 10% 0;
 }
 .card{
     width: 360px;
