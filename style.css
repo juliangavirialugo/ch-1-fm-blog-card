@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Figtree";
+    src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+:root{
+    --bg-color-yellow: #F5D04E;
+    --scondary-text: #9d9c9c;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+
+body{
+    
+    background-color: var(--bg-color-yellow);
+}
+.cards-contanier{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    margin-top: 50%;
+}
+.card{
+    width: 380px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+  overflow: visible;
+ 
+}
+.visible{
+    background-color: #ffff ;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: solid black 1px;
+    & .card__image-container{
+       width: 100%;
+     
+        & img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    & button{
+        width: 80px;
+        height: 30px;
+        padding: 2px 7px;
+        border-radius: 3px;
+        border: none;
+        background-color: var(--bg-color-yellow);
+        font-weight: bold;
+    }
+    & .card__title{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    & .card__principal-text{
+        display: inline-block;
+        color: var(--scondary-text);
+        font-weight: bold;
+        font-size: 14px;
+    }
+    & .card__footer{
+        display: flex;
+        height: 60px;
+        gap: 20px;
+        align-items: center;
+        font-weight: bold;
+        & span{
+            border: solid var(--bg-color-yellow) 1px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-image: url(/assets/images/image-avatar.webp);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+.no-visible{
+   
+    background-color: black;
+    z-index: -999;
+    position: relative;
+    left: 12px;
+    top: -490px;
+}
+
